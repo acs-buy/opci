@@ -1,0 +1,74 @@
+outil-opci/
+├─ CONTEXT.md
+├─ NEP2300_MAPPING.md
+├─ ANTI_DERIVE_AUDIT_CHECKLIST.md
+├─ README.md
+├─ docs/
+│  ├─ architecture/
+│  │  ├─ architecture_logique.md
+│  │  └─ conventions_nommage.md
+│  ├─ normatif/
+│  │  ├─ glossaire_nep2300.md
+│  │  └─ regles_vocabulaire.md
+│  └─ exploitation/
+│     ├─ runbook_imports.md
+│     ├─ runbook_controles.md
+│     └─ runbook_cloture_exercice.md
+├─ sql/
+│  ├─ 00_schema_admin.sql
+│  ├─ 01_schema_ref.sql
+│  ├─ 02_schema_fact.sql
+│  ├─ 03_seed_ref_data.sql
+│  ├─ controls/
+│  │  ├─ ctrl_equilibre_debit_credit.sql
+│  │  ├─ ctrl_balance_vs_gl.sql
+│  │  ├─ ctrl_fec_format_minimum.sql
+│  │  └─ ctrl_variations_n_n1.sql
+│  ├─ programme_travail/
+│  │  ├─ generate_programme.sql
+│  │  └─ views_programme.sql
+│  └─ security/
+│     ├─ roles_and_permissions.sql
+│     └─ row_level_security.sql
+├─ dataflows/
+│  ├─ df_import_balance.json
+│  ├─ df_import_gl.json
+│  ├─ df_import_fec.json
+│  └─ df_common_transforms.md
+├─ powerbi/
+│  ├─ semantic_model/
+│  │  ├─ model_notes.md
+│  │  └─ measures/
+│  │     ├─ ctrl_coherence_measures.dax
+│  │     ├─ variation_measures.dax
+│  │     └─ programme_travail_measures.dax
+│  ├─ reports/
+│  │  ├─ 01_controles_coherence.pbix
+│  │  ├─ 02_programme_travail.pbix
+│  │  └─ 03_note_synthese.pbix
+│  └─ templates/
+│     ├─ theme.json
+│     └─ report_page_layouts.md
+├─ powerapps/
+│  ├─ app_import_validation.msapp
+│  ├─ app_programme_travail.msapp
+│  ├─ app_commentaires.msapp
+│  └─ notes_deploiement.md
+├─ flows/
+│  ├─ on_import_run_controls.json
+│  ├─ on_validation_lock_exercice.json
+│  ├─ generate_livrables.json
+│  └─ notes_deploiement.md
+├─ sharepoint/
+│  ├─ structure_dossiers.md
+│  ├─ types_contenu.md
+│  └─ metadata_columns.md
+└─ tests/
+   ├─ data_samples/
+   │  ├─ EXEMPLE_balance.csv
+   │  ├─ EXEMPLE_gl.csv
+   │  └─ EXEMPLE_fec.csv
+   └─ validation_checklists/
+      ├─ checklist_import.md
+      ├─ checklist_controles.md
+      └─ checklist_cloture.md
